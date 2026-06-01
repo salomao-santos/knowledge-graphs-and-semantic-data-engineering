@@ -14,3 +14,14 @@ Research, articles, notes, and resources about Knowledge Graphs, Semantic Data E
 - [schema/templates/source-summary.md](./schema/templates/source-summary.md): Template for source ingest summaries.
 - [schema/templates/entity-page.md](./schema/templates/entity-page.md): Template for entity pages.
 - [schema/templates/lint-report.md](./schema/templates/lint-report.md): Template for periodic lint reports.
+
+## Prompt Artifacts (Bilingual)
+
+- [prompt-ia-setup.md](./prompt-ia-setup.md): Universal bilingual setup prompt (EN + PT-BR).
+- [prompt-ia-setup-en.md](./prompt-ia-setup-en.md): English-only setup prompt.
+- [prompt-ia-setup-ptbr.md](./prompt-ia-setup-ptbr.md): PT-BR-only setup prompt.
+
+## Operational Schema (Bilingual)
+
+- [AGENTS-en.md](./AGENTS-en.md): Operational schema in English.
+- [AGENTS-ptbr.md](./AGENTS-ptbr.md): Operational schema in PT-BR.
