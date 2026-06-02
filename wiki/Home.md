@@ -3,6 +3,11 @@ title: Wiki Home
 page_type: overview
 created: 2026-06-01
 updated: 2026-06-01
+
+## Interface principal
+- Obsidian e a interface recomendada para navegacao humana.
+- Use Graph View para identificar hubs, lacunas e paginas orfas.
+- Armazene anexos locais em raw/assets/.
 status: active
 source_count: 1
 tags: [overview, wiki, obsidian]
@@ -12,13 +17,13 @@ tags: [overview, wiki, obsidian]
 
 ## Escopo
 Esta wiki organiza conhecimento sobre grafos de conhecimento, dados semanticos e engenharia semantica.
-
-## Modo de uso (Obsidian)
+- Templates disponiveis em schema/templates/.
+- Ja existem fontes e conceitos ingeridos em wiki/sources/, wiki/concepts/ e wiki/analysis/.
 1. Use o Obsidian como interface principal de leitura e manutencao.
 2. Use o Graph View para verificar topologia, paginas orfas e concentracoes tematicas.
-3. Guarde anexos e recortes em raw/assets/.
-4. Mantenha o fluxo markdown-first, sem dependencia de banco externo.
-
+- Ingerir o novo paper de saude publica adicionado em raw/papers/.
+- Criar entidades centrais em wiki/entities/ conforme as proximas ingestoes.
+- Rodar lint para mapear orfaos e contradicoes.
 ## Como usar
 1. Adicione uma nova fonte em raw/.
 2. Rode o fluxo de ingest para criar/atualizar paginas em wiki/.
