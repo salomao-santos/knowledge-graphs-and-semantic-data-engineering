@@ -199,7 +199,6 @@ ou desenvolver aplicações com os dados do CNPJ diretamente através das tab
 
 Figura 1. Arquitetura base para Geração do Dataset.
 
----
 
 Para construção do dataset, a metodologia proposta é organizada da seguinte
 forma conforme (Figura 2): i) Aquisição dos dados; ii) Geração das Tabelas Bronze;
@@ -211,7 +210,6 @@ iii) Geração das Tabelas Silver; iv) Geração das Tabelas Gold; v) Gerac�
 
 Figura 2. Metodologia para Construção do Dataset Semântico.
 
----
 
 
 
@@ -244,7 +242,6 @@ senta uma análise exploratória das tabelas bronze geradas.
 
 Figura 3. Distribuição de registros por tabela.
 
----
 
 3.3. Etapa 3: Geração das Tabelas Silver
 Nesta etapa, as tabelas bronze são tratadas por meio de diversas transformações e enri-
@@ -289,7 +286,6 @@ dos, seguindo a estrutura de um diagrama de classe, conforme Figura 4 (vide link
 
 Figura 4. Modelo Ontológico do CNPJ da RFB.
 
----
 
 
         Segundo, é feito o “matching” do esquema das tabelas bronze com as classes e
@@ -315,7 +311,6 @@ A Figura 5 apresenta uma representação da definição do esquema das tabel
 
 Figura 5. Processo de Matching entre a Ontologia e as Tabelas do Delta Lake.
 
----
 
        O processo de povoamento dos dados das tabelas silver baseia-se no uso funções
 que consultam as tabelas bronze, checam a consistência dos registros retornados, e os
@@ -415,7 +410,6 @@ vidade (cnpj:data inicio atividade), nome fantasia (cnpj:nome fantasia), telefon
 
 Figura 6. Exploração Visual de um recurso do DS.
 
----
 
 
          Através da exploração também pode-se observar algumas relações via
