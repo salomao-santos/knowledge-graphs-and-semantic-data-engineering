@@ -9,6 +9,8 @@ Catalogo de paginas da wiki. Atualize este arquivo a cada ingest e ao criar nova
 ## Sources
 - (adicione aqui) Ex.: [Source - 2026-06-01 - Titulo](wiki/sources/2026-06-01-titulo.md) - Resumo e extracoes principais.
 - [Source - 2026-06-01 - Ligacoes Semanticas Utilizando Predicados SKOS](wiki/sources/2026-06-01-ligacoes-semanticas-utilizando-predicados-skos.md) - Ingestao de artigo SBBD sobre geracao de links SKOS com SPARQL.
+- [Source - 2026-06-02 - Construcao de Linked Data Mashup para Integracao de Dados da Saude Publica](wiki/sources/2026-06-02-construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica.md) - Extracao integral do conteudo do artigo em formato Markdown.
+- [Source - 2026-06-02 - Construcao do Dataset Semantico de Pessoas Juridicas](wiki/sources/2026-06-02-construcao-do-dataset-semantico-de-pessoas-juridicas.md) - Extracao integral do conteudo do artigo em formato Markdown.
 
 ## Entities
 - (adicione aqui) Ex.: [Entity - Nome](wiki/entities/nome.md) - Entidade com atributos, evidencias e relacoes.

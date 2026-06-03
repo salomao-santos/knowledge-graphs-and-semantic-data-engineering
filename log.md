@@ -39,3 +39,24 @@ Formato recomendado para cada entrada:
 - Arquivos criados/atualizados: nomes dos PDFs em raw/papers/LLM; index.md; log.md.
 - Resumo da mudanca: Seis arquivos PDF existentes foram renomeados para lowercase-kebab-case; uma colisao de titulo foi resolvida com sufixo numerico (-2).
 - Proximos passos: Ao ingerir essas fontes, usar os novos nomes canônicos nas paginas de wiki/sources.
+
+## [2026-06-02] ingest | construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica
+- Objetivo: Extrair todo o conteudo do artigo em PDF para um arquivo Markdown sem traducao.
+- Arquivos lidos: raw/papers/ptbr/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica.pdf.
+- Arquivos criados/atualizados: wiki/sources/2026-06-02-construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica.md; index.md; log.md.
+- Resumo da mudanca: Conteudo textual integral do PDF extraido para Markdown em wiki/sources com frontmatter minimo.
+- Proximos passos: Revisar qualidade de OCR/extracao (acentos e hifenizacao) e, se necessario, gerar versao alternativa com outra ferramenta de extração.
+
+## [2026-06-02] ingest | construcao-do-dataset-semantico-de-pessoas-juridicas
+- Objetivo: Extrair todo o conteudo do artigo em PDF para um arquivo Markdown sem traducao.
+- Arquivos lidos: raw/papers/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas.pdf.
+- Arquivos criados/atualizados: wiki/sources/2026-06-02-construcao-do-dataset-semantico-de-pessoas-juridicas.md; index.md; log.md.
+- Resumo da mudanca: Conteudo textual integral do PDF extraido para Markdown em wiki/sources com frontmatter minimo.
+- Proximos passos: Revisar qualidade de OCR/extracao (acentos, hifenizacao e quebras de pagina) e inserir figuras em raw/assets quando necessario.
+
+## [2026-06-02] maintenance | limpeza-de-artefatos-pdf-nos-artigos-extraidos
+- Objetivo: Remover cabecalhos e rodapes de pagina do PDF que tornavam a leitura desorganizada.
+- Arquivos lidos: wiki/sources/2026-06-02-construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica.md; wiki/sources/2026-06-02-construcao-do-dataset-semantico-de-pessoas-juridicas.md.
+- Arquivos criados/atualizados: wiki/sources/2026-06-02-construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica.md (312→286 linhas); wiki/sources/2026-06-02-construcao-do-dataset-semantico-de-pessoas-juridicas.md (633→580 linhas); log.md.
+- Resumo da mudanca: Removidos cabecalhos repetitivos ("31th SBBD – SBBD Proceedings" e "Proceedings of the VI Dataset Showcase Workshop") e numeros de pagina isolados que apareciam intercalados no texto. Mantidos apenas os cabecalhos originais apos o frontmatter. Reduzidas linhas vazias excessivas. Total: 79 linhas removidas (26 do artigo 1, 53 do artigo 2). Conteudo textual dos artigos preservado integralmente sem alteracoes ou traducoes.
+- Proximos passos: Artigos prontos para uso e criacao de paginas derivadas em wiki/concepts/ e wiki/entities/.
