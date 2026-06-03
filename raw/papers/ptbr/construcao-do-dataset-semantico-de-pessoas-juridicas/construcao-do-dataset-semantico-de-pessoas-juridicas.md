@@ -2,10 +2,10 @@
 title: Source - 2026-06-02 - Construcao do Dataset Semantico de Pessoas Juridicas
 page_type: source
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-06-03
 status: active
 source_count: 1
-tags: [source, ingest, ptbr, dataset-semantico, linked-data-mashup, data-integration, mashup,  pessoas-juridicas, Data Lakehouse, Medallion, Databricks, Delta Lake, Data Lakehouse,  Ontologia e as Tabelas do Delta Lake]
+tags: [source, ingest, ptbr, dataset-semantico, linked-data-mashup, data-integration, mashup, pessoas-juridicas, data-lakehouse, medallion, databricks, delta-lake, ontologia, DSW2024, Florianopolis-2024]
 ---
 
 
