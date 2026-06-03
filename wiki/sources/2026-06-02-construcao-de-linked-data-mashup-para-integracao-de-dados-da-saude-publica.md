@@ -5,7 +5,7 @@ created: 2026-06-02
 updated: 2026-06-02
 status: active
 source_count: 1
-tags: [source, ingest, ptbr, saude-publica, linked-data-mashup]
+tags: [source, ingest, ptbr, saude-publica, linked-data-mashup, data-integration, mashup]
 ---
 
 

@@ -5,7 +5,7 @@ created: 2026-06-02
 updated: 2026-06-02
 status: active
 source_count: 1
-tags: [source, ingest, ptbr, dataset-semantico, pessoas-juridicas, Data Lakehouse, Medallion, Databricks, Delta Lake, Data Lakehouse,  Ontologia e as Tabelas do Delta Lake]
+tags: [source, ingest, ptbr, dataset-semantico, linked-data-mashup, data-integration, mashup,  pessoas-juridicas, Data Lakehouse, Medallion, Databricks, Delta Lake, Data Lakehouse,  Ontologia e as Tabelas do Delta Lake]
 ---
 
 
