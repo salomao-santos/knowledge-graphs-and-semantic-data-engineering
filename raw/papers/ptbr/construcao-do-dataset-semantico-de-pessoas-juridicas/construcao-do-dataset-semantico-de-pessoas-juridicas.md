@@ -195,7 +195,7 @@ ou desenvolver aplicações com os dados do CNPJ diretamente através das tab
 
 
 
-![Figura 1. Arquitetura base para Geracao do Dataset](../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-1-Arquitetura-Base-para-Geracao-do-Dataset.png)
+![Figura 1. Arquitetura base para Geracao do Dataset](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-1-Arquitetura-Base-para-Geracao-do-Dataset.png)
 
 Figura 1. Arquitetura base para Geração do Dataset.
 
@@ -207,7 +207,7 @@ iii) Geração das Tabelas Silver; iv) Geração das Tabelas Gold; v) Gerac�
 
 
 
-![Figura 2. Metodologia para Construcao do Dataset Semantico](../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-2-Metodologia-para-Construcao-do-Dataset-Semantico.png)
+![Figura 2. Metodologia para Construcao do Dataset Semantico](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-2-Metodologia-para-Construcao-do-Dataset-Semantico.png)
 
 Figura 2. Metodologia para Construção do Dataset Semântico.
 
@@ -240,7 +240,7 @@ senta uma análise exploratória das tabelas bronze geradas.
 
 
 
-![Figura 3. Distribuicao de registros por tabela](../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-3-Distribuicao-de-registros-por-tabela.png)
+![Figura 3. Distribuicao de registros por tabela](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-3-Distribuicao-de-registros-por-tabela.png)
 
 Figura 3. Distribuição de registros por tabela.
 
@@ -285,7 +285,7 @@ dos, seguindo a estrutura de um diagrama de classe, conforme Figura 4 (vide link
 
 
 
-![Figura 4. Modelo Ontologico do CNPJ da RFB](../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-4-Modelo-Ontologico-do-CNPJ-da-RFB.png)
+![Figura 4. Modelo Ontologico do CNPJ da RFB](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-4-Modelo-Ontologico-do-CNPJ-da-RFB.png)
 
 Figura 4. Modelo Ontológico do CNPJ da RFB.
 
@@ -311,7 +311,7 @@ A Figura 5 apresenta uma representação da definição do esquema das tabel
 
 
 
-![Figura 5. Processo de Matching entre a Ontologia e as Tabelas do Delta Lake](../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-5-Processo0de-Matching-entre-a-Ontologia-e-as-Tabelas-do-Delta-Lake.png)
+![Figura 5. Processo de Matching entre a Ontologia e as Tabelas do Delta Lake](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-5-Processo0de-Matching-entre-a-Ontologia-e-as-Tabelas-do-Delta-Lake.png)
 
 Figura 5. Processo de Matching entre a Ontologia e as Tabelas do Delta Lake.
 
@@ -411,7 +411,7 @@ vidade (cnpj:data inicio atividade), nome fantasia (cnpj:nome fantasia), telefon
 
 
 
-![Figura 6. Exploracao Visual de um recurso do DS](<../../raw/assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-6-Exploracao-Visual-de-um -recurso-do-DS.png>)
+![Figura 6. Exploracao Visual de um recurso do DS](<../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-6-Exploracao-Visual-de-um -recurso-do-DS.png>)
 
 Figura 6. Exploração Visual de um recurso do DS.
 
