@@ -14,15 +14,20 @@ Catalogo de paginas da wiki. Atualize este arquivo a cada ingest e ao criar nova
 
 ## Entities
 - (adicione aqui) Ex.: [Entity - Nome](wiki/entities/nome.md) - Entidade com atributos, evidencias e relacoes.
+- [Entity - Receita Federal do Brasil (RFB)](wiki/entities/receita-federal-brasil.md) - Orgao governamental responsavel pela administracao tributaria e dados do CNPJ.
 
 ## Concepts
 - (adicione aqui) Ex.: [Concept - Nome](wiki/concepts/nome.md) - Conceito com definicao, comparacoes e links.
 - [Concept - SKOS Mapping Predicates](wiki/concepts/skos-mapping-predicates.md) - Predicados de mapeamento semantico (exactMatch, broader, narrower, related).
 - [Concept - Linked Data Mashup (LDM)](wiki/concepts/linked-data-mashup-ldm.md) - Integracao semantica de fontes heterogeneas com ontologias e RDF.
+- [Concept - Data Lakehouse](wiki/concepts/data-lakehouse.md) - Arquitetura hibrida combinando data lakes e data warehouses com transacoes ACID.
+- [Concept - Arquitetura Medallion](wiki/concepts/arquitetura-medallion.md) - Pattern de organizacao em camadas Bronze/Silver/Gold para qualidade progressiva de dados.
+- [Concept - Delta Lake](wiki/concepts/delta-lake.md) - Framework de armazenamento com transacoes ACID, versionamento e otimizacao automatica.
 
 ## Analyses
 - (adicione aqui) Ex.: [Analysis - Tema](wiki/analysis/tema.md) - Sintese comparativa baseada na wiki.
 - [Analysis - Avaliacao da Metodologia SPARQL + SKOS](wiki/analysis/avaliacao-da-metodologia-sparql-skos.md) - Sintese critica dos resultados e limites da abordagem do artigo.
+- [Analysis - Metodologia Data Lakehouse para Datasets Semanticos](wiki/analysis/metodologia-data-lakehouse-datasets-semanticos.md) - Analise comparativa da abordagem hibrida Data Lakehouse com semantica para dados governamentais em larga escala.
 
 ## Reports
 - (adicione aqui) Ex.: [Lint Report - 2026-06-01](wiki/reports/lint-2026-06-01.md) - Diagnostico de consistencia e cobertura.

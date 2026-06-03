@@ -53,31 +53,31 @@ sil (RFB) disponibiliza dados cadastrais de empresas, estabelecimentos e quadros
 cietários, servindo como uma fonte de dados confiável e acessı́vel. Entretanto, obter e
 gerenciar esses dados não é uma tarefa trivial.
 
-        Nesse sentido, o Data Lakehouse emerge como uma arquitetura de dados inova-
-dora, combinando as vantagens dos data lakes e data warehouses para fornecer uma ca-
-mada de armazenamento unificada, eficiente e gerenciável. Um dos principais benefı́cios
-do Data Lakehouse é o suporte a transações ACID (Atomicidade, Consistência, Isola-
-mento e Durabilidade), que assegura operações de leitura e escrita confiáveis e consisten-
-tes, mesmo em ambientes de alta concorrência [Cherradi 2024].
-         O conceito de Data Lakehouse foi introduzido para abordar as limitações dos Data
-Lakes e Data Warehouses, já que o primeiro, embora sejam altamente escaláveis e capazes
-de armazenar dados em qualquer formato, muitas vezes sofrem com a falta de governança
-e qualidade de dados. Por outro lado, os Data Warehouses fornecem uma estrutura mais
+        Nesse sentido, o *Data Lakehouse* emerge como uma arquitetura de dados inova-
+dora, combinando as vantagens dos *data lakes* e *data warehouses* para fornecer uma ca-
+mada de armazenamento unificada, eficiente e gerenciável. Um dos principais benefı́cios
+do *Data Lakehouse* é o suporte a transações ACID (Atomicidade, Consistência, Isola-
+mento e Durabilidade), que assegura operações de leitura e escrita confiáveis e consisten-
+tes, mesmo em ambientes de alta concorrência [Cherradi 2024].
+         O conceito de *Data Lakehouse* foi introduzido para abordar as limitações dos *Data
+Lakes* e *Data Warehouses*, já que o primeiro, embora sejam altamente escaláveis e capazes
+de armazenar dados em qualquer formato, muitas vezes sofrem com a falta de governança
+e qualidade de dados. Por outro lado, os *Data Warehouses* fornecem uma estrutura mais
 rı́gida e eficiente para consultas, porém não conseguem lidar com a variedade e volume
 de dados [Armbrust et al. 2021].
          Além disso, utilizar esses dados em conjunto com tecnologias semânticas e grafos
 de conhecimento facilita o tratamento de grandes conjuntos de dados, proporcionando
-uma visão unificada e permitindo integrações com outras fontes e datasets. Em conjunto,
-tecnologias semânticas possibilitam a criação de conhecimento explı́cito a partir de dados
-implı́citos, possibilitando o uso de reasoners, que inferem novos fatos com base em regras
-predefinidas, sendo possı́vel derivar novas relações e insights [Ehrlinger and Wöß 2016].
-        Esse trabalho realiza a primeira iniciativa para construção de um dataset
-semântico (DS) de Pessoas Jurı́dicas baseado em uma arquitetura de Data Lakehouses
+uma visão unificada e permitindo integrações com outras fontes e *datasets*. Em conjunto,
+tecnologias semânticas possibilitam a criação de conhecimento explı́cito a partir de dados
+implı́citos, possibilitando o uso de *reasoners*, que inferem novos fatos com base em regras
+predefinidas, sendo possı́vel derivar novas relações e *insights* [Ehrlinger and Wöß 2016].
+        Esse trabalho realiza a primeira iniciativa para construção de um *dataset*
+semântico (*DS*) de Pessoas Jurı́dicas baseado em uma arquitetura de *Data Lakehouses*
 https://github.com/semantic-ekgraphs/dataset-semantico-pj.
-       As principais contribuições deste artigo são: i) Proposta de Arquitetura baseada
-em um Data Lakehouse e semântica para geração de um dataset; ii) Uma metodologia
-para a aquisição e o armazenamento de dados do Cadastro Nacional de Pessoa Jurı́dica
-(CNPJ); iii) Dataset semântico do CNPJ;
+       As principais contribuições deste artigo são: i) Proposta de Arquitetura baseada
+em um *Data Lakehouse* e semântica para geração de um *dataset*; ii) Uma metodologia
+para a aquisição e o armazenamento de dados do Cadastro Nacional de Pessoa Jurı́dica
+(CNPJ); iii) *Dataset* semântico do CNPJ;
 
 2. Descrição da Fonte de Dados Aberta (RFB)
 A Receita Federal do Brasil (RFB), ou Secretaria Especial da Receita Federal do Brasil,
@@ -88,14 +88,14 @@ descaminho, contrafação (pirataria) e tráfico de drogas, armas e animais.
 de CPFs e CNPJs. Logo, uma empresa que não tem CNPJ cadastrado na RFB é, então,
 uma empresa de fato, mas não de direito, já que estará fazendo exercı́cio ilegal das suas
 atividades. Os dados do Cadastro Nacional de Pessoa Jurı́dica da RFB, fonte de dados
-alvo deste trabalho, são disponibilizados no [link1](https://tinyurl.com/446kazkr) e o Layout oficial dos dados no [link2](https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf).
+alvo deste trabalho, são disponibilizados no [link1](https://tinyurl.com/44z6xkk9) e o Layout oficial dos dados no [link2](https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf).
 
-Além das informações de pessoa jurídica (empresa e estabelecimento), também são fornecidos dados sobre o quadro societário e de tabelas complementares, como: Tabela de Qualificações, Naturezas Legais, [Simples Nacional/MEI](http://200.152.38.155/CNPJ/simples.zip) e [Razão de Situação Cadastral](http://200.152.38.155/CNPJ/Motivos.zip).
+Além das informações de pessoa jurídica (empresa e estabelecimento), também são fornecidos dados sobre o quadro societário e de tabelas complementares, como: Tabela de Qualificações, Naturezas Legais, [Simples Nacional/MEI](http://200.152.38.155/CNPJ/Simples.zip) e [Razão de Situação Cadastral](http://200.152.38.155/CNPJ/Motivos.zip).
 
 **Referências dos links:**
-1. Dados CNPJ: https://tinyurl.com/446kazkr
+1. Dados CNPJ: https://tinyurl.com/44z6xkk9
 2. Layout oficial: https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf
-3. Simples Nacional/MEI: http://200.152.38.155/CNPJ/simples.zip
+3. Simples Nacional/MEI: http://200.152.38.155/CNPJ/Simples.zip
 4. Motivos/Razão Situação Cadastral: http://200.152.38.155/CNPJ/Motivos.zip
 
 
@@ -162,21 +162,21 @@ Tabela 2 apresenta a listagem dos arquivos csv e suas respectivas descrições
 
 
 
-3. Metodologia para Construção do Dataset Semântico
-O uso de Delta Lake apresenta-se como uma solução robusta para muitos dos desafios
-enfrentados pelos Data Lakes tradicionais [Armbrust et al. 2020]. Nesse sentido, Delta
-Lake é uma framework de armazenamento que permite a criação de Delta Tables, propor-
+3. Metodologia para Construção do *Dataset* Semântico
+O uso de Delta Lake apresenta-se como uma solução robusta para muitos dos desafios
+enfrentados pelos *Data Lakes* tradicionais [Armbrust et al. 2020]. Nesse sentido, Delta
+Lake é uma *framework* de armazenamento que permite a criação de Delta Tables, propor-
 cionando Transações ACID, Data History, Change Data Feed, Otimização Automática,
 Schema Evolution e Gerenciamento de Dados Não Estruturados [Haelen and Davis 2023].
 Essa solução trata o fluxo dos dados e organiza-o na arquitetura Medallion, também co-
 nhecida como arquitetura de camadas, um design adotado pelo Delta Lake para organizar
 dados de forma hierárquica e incremental, visando melhorar a qualidade dos dados e a
 eficiência das consultas, sendo essa uma abordagem amplamente utilizada em arquitetu-
-ras de Data Lakehouse [Databricks 2021].
-        A arquitetura geral adotada para construção do dataset do Cadastro Nacional de
-Pessoas Jurı́dicas com base em um Data Lakehouse Semântico é apresentada na Figura
-1. Essa arquitetura serve para nortear a metodologia para desenvolvimento do dataset
-deste trabalho. Na arquitetura apresentada, o Data Lakehouse é estruturado através do
+ras de *Data Lakehouse* [Databricks 2021].
+        A arquitetura geral adotada para construção do *dataset* do Cadastro Nacional de
+Pessoas Jurı́dicas com base em um *Data Lakehouse* Semântico é apresentada na Figura
+1. Essa arquitetura serve para nortear a metodologia para desenvolvimento do *dataset*
+deste trabalho. Na arquitetura apresentada, o *Data Lakehouse* é estruturado através do
 uso do Delta Lake. Ainda, a arquitetura utilizada como base é flexı́vel e segue esquemas
 semanticamente coerentes, isto é, possibilitando que desenvolvedores, ainda não familia-
 rizados com tecnologias semânticas, possam alternativamente realizar consultas em SQL
@@ -197,7 +197,7 @@ iii) Geração das Tabelas Silver; iv) Geração das Tabelas Gold; v) Gerac�
 
 ![Figura 2. Metodologia para Construcao do Dataset Semantico](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-2-Metodologia-para-Construcao-do-Dataset-Semantico.png)
 
-Figura 2. Metodologia para Construção do Dataset Semântico.
+Figura 2. Metodologia para Construção do *Dataset* Semântico.
 
 
 
@@ -309,7 +309,7 @@ compreensão e uso.
 
 3.4. Etapa 4: Geração das Tabelas Gold
 Ao utilizar a arquitetura Medallion no Delta Lake, podemos criar tabelas Gold que agre-
-guem dados a partir dessa base, oferecendo insights valiosos para diversos stakeholders.
+guem dados a partir dessa base, oferecendo *insights* valiosos para diversos *stakeholders*.
 A seguir, são especificadas quatro tabelas Gold construı́das, cada uma com foco em as-
 pectos especı́ficos dos dados do CNPJ.
       • Empresas e Atividades Econômicas (TG1): Esta tabela consolidará informações
@@ -340,13 +340,13 @@ que relacionam os termos do esquema da fonte de dados aos termos da ontologia. E
 mapeamentos são mapeamentos diretos a partir das Delta Tables. Adotando esse padrão,
 o esquema e a complexidade contidas nos mapeamentos são refletidas diretamente a partir
 das tabelas normalizadas silver.
-         Nesse estágio, foi desenvolvido um script8 para geração do DS utilizando um
-arquivo de mapeamento9 como entrada lógica para geração das triplas. Esse mapeamento
+         Nesse estágio, foi desenvolvido um script8 para geração do *DS* utilizando um
+arquivo de mapeamento9 como entrada lógica para geração das triplas. Esse mapeamento
 seguiu a estrutura do R2RML [W3C 2012b] por ter sua sintaxe amplamente conhecida na
-literatura. O DS gerado neste trabalho está disponı́vel no seguinte link10 .
+literatura. O *DS* gerado neste trabalho está disponı́vel no seguinte link10 .
 
-4. Descrição Quantitativa do Dataset
-A Tabela 2 apresenta uma visão geral do dataset construı́do, destacando três classes prin-
+4. Descrição Quantitativa do *Dataset*
+A Tabela 2 apresenta uma visão geral do *dataset* construı́do, destacando três classes prin-
 cipais: cnpj:Empresa, cnpj:Estabelecimento e cnpj:Pessoa. Para cada classe, são exi-
 bidas a quantidade de recursos, as relações de propriedade de dados, as relações com
 recursos de saı́da e as relações com recursos de entrada. A classe cnpj:Empresa contém
@@ -397,7 +397,7 @@ vidade (cnpj:data inicio atividade), nome fantasia (cnpj:nome fantasia), telefon
 
 ![Figura 6. Exploracao Visual de um recurso do DS](<../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-6-Exploracao-Visual-de-um -recurso-do-DS.png>)
 
-Figura 6. Exploração Visual de um recurso do DS.
+Figura 6. Exploração Visual de um recurso do *DS*.
 
 
 
