@@ -129,7 +129,7 @@ mentas especı́ﬁcas em cada etapa. Nas subseções seguintes são abordada
 especiﬁcação e materialização.
 
 
-![Figura 1. Framework 3-Camadas](../../raw/assets/ptbr/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica/Figura-1-Framework-3-Camadas.png)
+![Figura 1. Framework 3-Camadas](../../../assets/ptbr/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica/Figura-1-Framework-3-Camadas.png)
 
 
         Figura 1. Framework 3-Camadas
@@ -171,7 +171,7 @@ novos conceitos, como gissa:numeroNascidosVivos.
 
 
 
-![Figura 2. DATASUS OWL](../../raw/assets/ptbr/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica/Figura-2-DATASUS-OWL.png)
+![Figura 2. DATASUS OWL](../../../assets/ptbr/construcao-de-linked-data-mashup-para-integracao-de-dados-da-saude-publica/Figura-2-DATASUS-OWL.png)
 
                                      Figura 2. DATASUS OWL
 
