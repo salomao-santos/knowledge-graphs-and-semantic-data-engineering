@@ -95,19 +95,15 @@ descaminho, contrafação (pirataria) e tráfico de drogas, armas e animais.
 de CPFs e CNPJs. Logo, uma empresa que não tem CNPJ cadastrado na RFB é, então,
 uma empresa de fato, mas não de direito, já que estará fazendo exercı́cio ilegal das suas
 atividades. Os dados do Cadastro Nacional de Pessoa Jurı́dica da RFB, fonte de dados
-alvo deste trabalho, são disponibilizados no link1 e o Layout oficial dos dados no link2 .
-        Além das informações de pessoa jurı́dica (empresa e estabelecimento), também
-são fornecidos dados sobre o quadro societário e de tabelas complementares, como: Ta-
-bela de Qualificações,Naturezas Legais, Simples Nacional/MEI3 e Razão de Situação Ca-
-dastral4 .
-   1
-     https://tinyurl.com/44z6xkk9
-   2
-     https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf
-   3
-     http://200.152.38.155/CNPJ/Simples.zip
-   4
-     http://200.152.38.155/CNPJ/Motivos.zip
+alvo deste trabalho, são disponibilizados no [link1](https://tinyurl.com/446kazkr) e o Layout oficial dos dados no [link2](https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf).
+
+Além das informações de pessoa jurídica (empresa e estabelecimento), também são fornecidos dados sobre o quadro societário e de tabelas complementares, como: Tabela de Qualificações, Naturezas Legais, [Simples Nacional/MEI](http://200.152.38.155/CNPJ/simples.zip) e [Razão de Situação Cadastral](http://200.152.38.155/CNPJ/Motivos.zip).
+
+**Referências dos links:**
+1. Dados CNPJ: https://tinyurl.com/446kazkr
+2. Layout oficial: https://www.gov.br/receitafederal/dados/cnpj-metadados.pdf
+3. Simples Nacional/MEI: http://200.152.38.155/CNPJ/simples.zip
+4. Motivos/Razão Situação Cadastral: http://200.152.38.155/CNPJ/Motivos.zip
 
 
 
