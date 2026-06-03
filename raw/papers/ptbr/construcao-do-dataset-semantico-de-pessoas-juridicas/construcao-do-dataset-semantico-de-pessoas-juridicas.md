@@ -9,36 +9,33 @@ tags: [source, ingest, ptbr, dataset-semantico, linked-data-mashup, data-integra
 ---
 
 
+**Proceedings of the VI Dataset Showcase Workshop (DSW)**  
+**October 2024 – Florianópolis, SC, Brazil**
 
-      Construção do Dataset Semântico de Pessoas Jurı́dicas
-               Tulio Vidal Rolim12 , Caio Viktor Silva Avila1 , Renato Freitas1 ,
-                   Roberval Gomes Mariano1 , Vania Maria Ponte Vidal 1
-                1
-                    Department of Computing – Federal University of Ceará (UFC)
-                                     Fortaleza – CE – Brazil
-           2
-               Instituto Federal de Educação, Ciência e Tecnologia do Piauı́ (IFPI)
-    {tulio.xcrtf,arlaass,jrenatosfreitas,mariano.rgm1,vania.pvidal}gmail.com
+---
 
-     Abstract. The Federal Revenue of Brazil provides registration data on compa-
-     nies, establishments and corporate bodies through the National Register of Le-
-     gal Entities (CNPJ), serving as a reliable and accessible source of data. Howe-
-     ver, obtaining and managing this data is not a trivial task. This work carries
-     out the first initiative to build a semantic dataset (DS) of Legal Entities based
-     on a Data Lakehouses and semantics architecture. Throughout this article, the
-     dataset construction process is described, also providing the resources, scripts
-     and artifacts used, as well as an exploration through GraphDB and presentation
-     of possible use cases.
-     Resumo. A Receita Federal do Brasil disponibiliza dados cadastrais de em-
-     presas, estabelecimentos e quadros societários através do Cadastro Nacional
-     de Pessoas Jurı́dicas (CNPJ), servindo como uma fonte de dados confiável e
-     acessı́vel. Entretanto, obter e gerenciar esses dados não é uma tarefa tri-
-     vial. Esse trabalho realiza a primeira iniciativa para construção de um da-
-     taset semântico (DS) de Pessoas Jurı́dicas baseado em uma arquitetura de
-     Data Lakehouses e semântica. No decorrer deste artigo é descrito processo
-     de construção do dataset, fornecendo também os recursos, scripts e artefatos
-     utilizados, além de uma exploração através do GraphDB e apresentação de
-     possı́veis casos de uso.
+# Construção do Dataset Semântico de Pessoas Jurídicas
+
+**Autores:**
+- **Tulio Vidal Rolim**<sup>1,2</sup> · **Caio Viktor Silva Avila**<sup>1</sup> · **Renato Freitas**<sup>1</sup> · **Roberval Gomes Mariano**<sup>1</sup> · **Vania Maria Ponte Vidal**<sup>1</sup>
+
+**Afiliações:**
+1. Department of Computing – Federal University of Ceará (UFC), Fortaleza – CE – Brazil
+2. Instituto Federal de Educação, Ciência e Tecnologia do Piauí (IFPI)
+
+**Contato:** {tulio.xcrtf, arlaass, jrenatosfreitas, mariano.rgm1, vania.pvidal}@gmail.com
+
+---
+
+## Abstract
+
+The Federal Revenue of Brazil provides registration data on compa- nies, establishments and corporate bodies through the National Register of Le- gal Entities (CNPJ), serving as a reliable and accessible source of data. Howe- ver, obtaining and managing this data is not a trivial task. This work carries out the first initiative to build a semantic dataset (DS) of Legal Entities based on a Data Lakehouses and semantics architecture. Throughout this article, the dataset construction process is described, also providing the resources, scripts and artifacts used, as well as an exploration through GraphDB and presentation of possible use cases.
+
+## Resumo
+
+A Receita Federal do Brasil disponibiliza dados cadastrais de em- presas, estabelecimentos e quadros societários através do Cadastro Nacional de Pessoas Jurı́dicas (CNPJ), servindo como uma fonte de dados confiável e acessı́vel. Entretanto, obter e gerenciar esses dados não é uma tarefa tri- vial. Esse trabalho realiza a primeira iniciativa para construção de um da- taset semântico (DS) de Pessoas Jurı́dicas baseado em uma arquitetura de Data Lakehouses e semântica. No decorrer deste artigo é descrito processo de construção do dataset, fornecendo também os recursos, scripts e artefatos utilizados, além de uma exploração através do GraphDB e apresentação de possı́veis casos de uso.
+
+---
 
 1. Introdução
 Nos últimos anos, com o aumento da quantidade de dados públicos disponı́veis, também
@@ -55,10 +52,6 @@ cimento.
 sil (RFB) disponibiliza dados cadastrais de empresas, estabelecimentos e quadros so-
 cietários, servindo como uma fonte de dados confiável e acessı́vel. Entretanto, obter e
 gerenciar esses dados não é uma tarefa trivial.
-
-Proceedings of the VI Dataset Showcase Workshop (DSW)       October 2024 – Florianópolis, SC, Brazil
-
-
 
         Nesse sentido, o Data Lakehouse emerge como uma arquitetura de dados inova-
 dora, combinando as vantagens dos data lakes e data warehouses para fornecer uma ca-
