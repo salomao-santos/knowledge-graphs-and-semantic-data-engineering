@@ -29,13 +29,14 @@ tags: [source, ingest, ptbr, dataset-semantico, linked-data-mashup, data-integra
 
 ## Abstract
 
-The Federal Revenue of Brazil provides registration data on compa- nies, establishments and corporate bodies through the National Register of Le- gal Entities (CNPJ), serving as a reliable and accessible source of data. Howe- ver, obtaining and managing this data is not a trivial task. This work carries out the first initiative to build a semantic dataset (DS) of Legal Entities based on a Data Lakehouses and semantics architecture. Throughout this article, the dataset construction process is described, also providing the resources, scripts and artifacts used, as well as an exploration through GraphDB and presentation of possible use cases.
+The Federal Revenue of Brazil provides registration data on compa- nies, establishments and corporate bodies through the National Register of Le- gal Entities (CNPJ), serving as a reliable and accessible source of data. Howe- ver, obtaining and managing this data is not a trivial task. This work carries out the first initiative to build a semantic *dataset* (*DS*) of Legal Entities based on a Data Lakehouses and semantics architecture. Throughout this article, the *dataset* construction process is described, also providing the resources, scripts and artifacts used, as well as an exploration through GraphDB and presentation of possible use cases.
 
 ## Resumo
 
 A Receita Federal do Brasil disponibiliza dados cadastrais de em- presas, estabelecimentos e quadros societários através do Cadastro Nacional de Pessoas Jurı́dicas (CNPJ), servindo como uma fonte de dados confiável e acessı́vel. Entretanto, obter e gerenciar esses dados não é uma tarefa tri- vial. Esse trabalho realiza a primeira iniciativa para construção de um da- taset semântico (DS) de Pessoas Jurı́dicas baseado em uma arquitetura de Data Lakehouses e semântica. No decorrer deste artigo é descrito processo de construção do dataset, fornecendo também os recursos, scripts e artefatos utilizados, além de uma exploração através do GraphDB e apresentação de possı́veis casos de uso.
 
 ---
+
 
 1. Introdução
 Nos últimos anos, com o aumento da quantidade de dados públicos disponı́veis, também
@@ -53,9 +54,7 @@ sil (RFB) disponibiliza dados cadastrais de empresas, estabelecimentos e quadros
 cietários, servindo como uma fonte de dados confiável e acessı́vel. Entretanto, obter e
 gerenciar esses dados não é uma tarefa trivial.
 
-        Nesse sentido, o *Data Lakehouse* emerge como uma arquitetura de dados inova-
-dora, combinando as vantagens dos *data lakes* e *data warehouses* para fornecer uma ca-
-mada de armazenamento unificada, eficiente e gerenciável. Um dos principais benefı́cios
+        Nesse sentido, o *Data Lakehouse* emerge como uma arquitetura de dados inovadora, combinando as vantagens dos *data lakes* e *data warehouses* para fornecer uma camada de armazenamento unificada, eficiente e gerenciável. Um dos principais benefícios
 do *Data Lakehouse* é o suporte a transações ACID (Atomicidade, Consistência, Isola-
 mento e Durabilidade), que assegura operações de leitura e escrita confiáveis e consisten-
 tes, mesmo em ambientes de alta concorrência [Cherradi 2024].
@@ -189,13 +188,13 @@ ou desenvolver aplicações com os dados do CNPJ diretamente através das tab
 Figura 1. Arquitetura base para Geração do Dataset.
 
 
-Para construção do dataset, a metodologia proposta é organizada da seguinte
-forma conforme (Figura 2): i) Aquisição dos dados; ii) Geração das Tabelas Bronze;
-iii) Geração das Tabelas Silver; iv) Geração das Tabelas Gold; v) Geração do Dataset.
+Para construção do *dataset*, a metodologia proposta é organizada da seguinte
+forma conforme (Figura 2): i) Aquisição dos dados; ii) Geração das Tabelas Bronze;
+iii) Geração das Tabelas Silver; iv) Geração das Tabelas Gold; v) Geração do *Dataset*.
 
 
 
-![Figura 2. Metodologia para Construcao do Dataset Semantico](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-2-Metodologia-para-Construcao-do-Dataset-Semantico.png)
+![**Figura 2. Metodologia para Construcao do Dataset Semantico](../../../assets/ptbr/construcao-do-dataset-semantico-de-pessoas-juridicas/Figura-2-Metodologia-para-Construcao-do-Dataset-Semantico.png)
 
 Figura 2. Metodologia para Construção do *Dataset* Semântico.
 
@@ -239,10 +238,9 @@ quecimentos para normalizar e facilitar o uso dos dados do CNPJ, como:
         estabelecimento é composto por 3 campos (CNPJ BASICO, CNPJ ORDEM,
         CNPJ DIV) sendo necessário sempre realizar a concatenação para consultas que
         envolvam estabelecimento. Dessa forma foi gerado um campo único: CNPJ;
-   5
+[^5]:
        https://tinyurl.com/ye26w3my
-   6
-       https://tinyurl.com/s3hp8vwh
+[^6]: https://tinyurl.com/s3hp8vwh
 
 
 
@@ -254,11 +252,8 @@ quecimentos para normalizar e facilitar o uso dos dados do CNPJ, como:
           est.SITUACAO passa a ter também o valor ‘ATIVA’;
        4. Integração dos dados de empresa com as tabelas de estabelecimento, socio, qua-
           lif socio e nat ju para criar uma visão completa da estrutura empresarial;
-       5. Inclusão de novas Delta Tables para representação de concei-
-          tos      derivados,        e.g     (RFB SOCIEDADE COM PESSOA FISICA,
-          RFB SOCIEDADE COM HOLDING, RFB SOCIEDADE COM
-          ESTRANGEIRO), essas tabelas facilitam e simplificam a relação entre Sócios
-          e Empresas, já que demandam de junção entre o CNPJ BASICO das tabelas de
+   5. Inclusão de novas *Delta Tables* para representação de conceitos derivados, e.g. (**RFB_SOCIEDADE_COM_PESSOA_FISICA**, **RFB_SOCIEDADE_COM_HOLDING**, **RFB_SOCIEDADE_COM_ESTRANGEIRO**), essas tabelas facilitam e simplificam a relação entre Sócios
+          e Empresas, já que demandam de junção entre o `CNPJ_BASICO` das tabelas de
           Empresas e Sócio, não havendo o conceito de sociedade / quadro societário.
        6. Criação das tabelas delta de relação 1 pra N;
         A geração das tabelas silver consiste no processo de normalização dos dados con-
@@ -266,8 +261,7 @@ tidos nas tabelas bronze. Para tanto, para possibilitar uma maior semântica, e
 é guiada com base no uso de ontologias, garantindo uma organização conceitual, assim
 como provendo a diminuição do “gap” semântico entre o esquema das tabelas e mapea-
 mentos para o modelo RDF [Bertails and Prud’hommeaux 2011].
-        Primeiro, uma ontologia foi modelada conceitualmente baseada no Layout de da-
-dos, seguindo a estrutura de um diagrama de classe, conforme Figura 4 (vide link 7 ).
+Primeiro, uma ontologia foi modelada conceitualmente baseada no Layout de dados, seguindo a estrutura de um diagrama de classe, conforme **Figura 4. Modelo Ontológico do CNPJ da RFB** (vide link[^7]).
 
 
 
@@ -282,8 +276,7 @@ propriedades da ontologia projetada. Essa estratégia tem a semântica refleti
 da lógica de mapeamentos diretos, removendo a complexidade pertencente às tabelas
 [W3C 2012a]. Onde se adotam as heurı́sticas:
         • Classe: É mapeada como uma tabela;
-   7
-       https://tinyurl.com/2e29jmhw
+[^7]: https://tinyurl.com/2e29jmhw
 
 
 
@@ -332,9 +325,9 @@ pectos especı́ficos dos dados do CNPJ.
          informações agrupadas por sociedade e e sócios, permitindo identificar aspec-
          tos como: qualificação, representante, data de entrada e por exemplo, todas as
          relações de quadro societário desse sócio nas variadas empresas.
-3.5. Etapa 5: Geração do Dataset
-O dataset semântico (DS) gerado neste trabalho consiste em um grafo RDF que utiliza
-o mesmo vocabulário/schema da ontologia apresentada na subseção 3.3. Logo, um DS
+3.5. Etapa 5: Geração do *Dataset*
+O *dataset* semântico (*DS*) gerado neste trabalho consiste em um grafo RDF que utiliza
+o mesmo vocabulário/*schema* da ontologia apresentada na subseção 3.3. Logo, um *DS*
 é uma visão RDF materializada, sendo esta definida por um conjunto de mapeamentos
 que relacionam os termos do esquema da fonte de dados aos termos da ontologia. Esses
 mapeamentos são mapeamentos diretos a partir das Delta Tables. Adotando esse padrão,
@@ -353,18 +346,12 @@ recursos de saı́da e as relações com recursos de entrada. A classe cnpj:Em
 57.639.205 recursos, com 345.835.230 relações de propriedade de dados, 296.609.901
 relações de saı́da e 24.135.831 relações de entrada.
 
-                                      Relações de
-                          Quantidade                Relações (Links)              Relações (Links)
-         Classe                       Propriedade
-                          de Recursos                  de Saı́da                      de Entrada
-                                        de Dados
-      cnpj:Empresa         57639205    345835230      296609901                         24135831
-  cnpj:Estabelecimento     60450604    604506040      329948366                         60450604
- cnpj:Pessoa / cnpj:Socio  16029797     80148985       16029797                         33061387
-                    Tabela 3. Visão Recorte - Quantitativa do Dataset Semântico
-
-
-       Já a classe cnpj:Estabelecimento inclui 60.450.604 recursos, acompanhados por
+\n
+| Classe | Quantidade de Recursos | Relações de Propriedade de Dados | Relações (Links) de Saída | Relações (Links) de Entrada |
+|--------|------------------------|----------------------------------|---------------------------|------------------------------|
+| `cnpj:Empresa` | 57.639.205 | 345.835.230 | 296.609.901 | 24.135.831 |
+| `cnpj:Estabelecimento` | 60.450.604 | 604.506.040 | 329.948.366 | 60.450.604 |
+| `cnpj:Pessoa` / `cnpj:Socio` | 16.029.797 | 80.148.985 | 16.029.797 | 33.061.387 |
 604.506.040 relações de propriedade de dados, 329.948.366 relações (links) de saı́da e
 60.450.604 relações links de entrada. Por fim, a classe cnpj:Pessoa abrange 16.029.797
 recursos, 80.148.985 relações de propriedade de dados, 16.029.797 relações de saı́da e
@@ -404,22 +391,22 @@ Figura 6. Exploração Visual de um recurso do *DS*.
          Através da exploração também pode-se observar algumas relações via
 object properties entre o nó do Estabelecimento e sua Situação Cadastral
 (<INAPTA0022352700018520190109>), bem como seu tipo de estabelecimento
-(<Matriz>). Esses tipos de relações expressam uma das possibilidades no uso de dataset
+(<Matriz>). Esses tipos de relações expressam uma das possibilidades no uso de *dataset*
 semântico, pois a exploração/navegação sobre um recurso/instância especı́fica a outra(a) é
-feita através de arestas, tornando a navegação mais intuitiva e user-friendly. Além disso, a
-estrutura baseada em grafo facilita a extração de insights significativos, pois as conexões
+feita através de arestas, tornando a navegação mais intuitiva e *user-friendly*. Além disso, a
+estrutura baseada em grafo facilita a extração de *insights* significativos, pois as conexões
 explı́citas entre os dados ajudam a revelar padrões e correlações que podem não ser facil-
 mente visı́veis em outras formas de representação, sendo essa uma outra vantagem no uso
-de datasets semânticos aos usuários.
+de *datasets* semânticos aos usuários.
 
-6. Casos de Uso do Dataset
+6. Casos de Uso do *Dataset*
 A utilização de um dataset semântico derivado do CNPJ da RFB pode atender a diversas
 necessidades e aplicações estratégicas de uma Secretaria da Fazenda estadual. Esse tipo
-de dataset facilita uma análise profunda e eficiente de informações cadastrais, promo-
+de *dataset* facilita uma análise profunda e eficiente de informações cadastrais, promo-
 vendo a detecção de inconsistências, fraudes e irregularidades, além de apoiar a tomada
-de decisões estratégicas. A seguir, são discutidos alguns usos especı́ficos de um dataset
+de decisões estratégicas. A seguir, são discutidos alguns usos especı́ficos de um *dataset*
 semântico no âmbito fiscal e cadastral.
-        Monitoramento de Conformidade Fiscal: Os dados contidos no DS podem ser
+        Monitoramento de Conformidade Fiscal: Os dados contidos no *DS* podem ser
 utilizados para verificar a conformidade fiscal das empresas registradas por Secretarias da
 
 
@@ -473,30 +460,30 @@ alguns casos, oportuno utilizar a qualificação do sócio.
 
 8. Trabalhos Relacionados
 Trabalhos recentes demonstram esforços para se integrar a crescente quantidade de
-coleções de dados públicos. [Barbosa 2023] aborda a implementação de um dataset
+coleções de dados públicos. [Barbosa 2023] aborda a implementação de um *dataset*
 semântico utilizando um Datalake municipal para o Rio de Janeiro, destacando sua re-
 levância no setor público, principalmente em termos de escalabilidade, governança e
 polı́ticas públicas, sendo potencialmente replicável em outras cidades e paı́ses.
-        [Braz et al. 2023] apresenta um estudo que gerou um dataset de empresas relacio-
+        [Braz et al. 2023] apresenta um estudo que gerou um *dataset* de empresas relacio-
 nadas a licitações públicas no estado de Minas Gerais envolvidas em fraudes ou com com-
 portamentos suspeitos , sendo um dataset útil para aprimorar os mecanismos de prevenção
 e controle de fraudes nos processos licitatórios.
         Por sua vez, [do Prado Pagotto et al. 2024] propõem a criação de um data lake
-para armazenar e sistematizar dados de saúde no Brasil. O dataset gerado é composto
+para armazenar e sistematizar dados de saúde no Brasil. O *dataset* gerado é composto
 por informações de diferentes fontes do sistema de saúde, incluindo dados sobre pacien-
 tes, atendimentos médicos, hospitais e indicadores de saúde pública, tendo como finali-
 dade apoiar decisões informadas e desenvolver polı́ticas públicas mais precisas na área de
 saúde.
         Tendo em vista os trabalhos anteriormente citados, podemos observar que os estu-
 dos e pesquisas na área concentram-se na integração de dados governamentais e geração
-de datasets para domı́nios como (educação, saúde, polı́ticas públicas), Já o trabalho atual
+de *datasets* para domı́nios como (educação, saúde, polı́ticas públicas), Já o trabalho atual
 propõe a criação de um dataset semântico de Pessoas Jurı́dicas, baseado no Cadastro Na-
 cional de Pessoas Jurı́dicas, diferenciando-se por tratar todo o processo para a criação
 de um dataset semântico baseado em dados abertos públicos, desde sua modelagem,
 representação, geração e consumo.
         Esse trabalho também adota uma arquitetura hı́brida baseada em um Data La-
 kehouse, que combina aspectos de data lakes e data warehouses incorporando uma camada
-semântica para enriquecer o dataset. Esse tipo de arquitetura para geração do dataset não
+semântica para enriquecer o *dataset*. Esse tipo de arquitetura para geração do dataset não
 foi abordada nos trabalhos anteriores, tratando apenas de data lakes tradicionais. Ainda,
 este trabalho gera diversas contribuições ao conjunto de dados original, realizando lim-
 peza, tratamento e normalização aos dados, agrupando conceitos previamente complexos
